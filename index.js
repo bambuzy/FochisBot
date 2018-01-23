@@ -20,6 +20,7 @@ client.on('message', message => {
 	} 
 	
 	  if (message.content == '!chala'){
+		//javascript
 		var rand1 = Math.round(Math.random()*30);
 		
 		if ( rand1 < 10){message.reply('La chala te mide ' + rand1 + ' cm, manicero :ok_hand: ');
@@ -33,6 +34,7 @@ client.on('message', message => {
 		
 		if(message.content == '!meme'){
 			message.reply('entró');
+			//javascript
 			var rand2 = Math.round(Math.random()*5);
 			switch (rand2) {
 			case 1: message.reply('https://goo.gl/4W6xYU');
@@ -53,7 +55,7 @@ client.on('message', message => {
 		
 		
 	  
-	  
+	// comando para que el bot entre al canal de voz en el que se encuentra el usuario 
 	if (message.content. startsWith('!entrar')) { 
 		let Canalvoz = message.member.voiceChannel;
 		if (!Canalvoz || Canalvoz.type !== 'voice') {
@@ -68,7 +70,7 @@ client.on('message', message => {
 		 }).catch(error => message.channel.send(error));
 		}
 	}
-	
+	//comando para salir del canal de voz
 	if (message.content.startsWith('!salir')) { 
     let Canalvoz = message.member.voiceChannel;
 		if (!Canalvoz) {
@@ -80,6 +82,9 @@ client.on('message', message => {
 		}   
 	}
 	
+
+//efectos de sonidos
+
 	if (message.content.startsWith('!bocina')) {
 		if (!message.guild.voiceConnection) return message.channel.send('¡No estoy en un canal de voz!, use `!entrar` para unirme a un canal.').catch(error => message.channel.send(error));
 		
@@ -109,5 +114,5 @@ client.on('message', message => {
 	
 	
 });
-
+//dentro se encuentra el token de bot creado en la plataforma de discordapp
 client.login('NDA1MDA1MTYzMTQxNzkxNzQ0.DUex5A.BGQ6NGFQ0_jbYwv3ukmSn53Dxiw');
